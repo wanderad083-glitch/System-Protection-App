@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .cyan-glow {
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-black text-[#e0e0e0] antialiased font-sans;
+}
+
+.high-density-pane {
+  @apply bg-[#0d0d0d] border border-[#222] p-3;
+}
+
+.mono-metric {
+  @apply font-mono text-xs font-bold uppercase tracking-wider;
+}
+
+.cyan-glow {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
