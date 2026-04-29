@@ -24,6 +24,7 @@ import Scanner from './components/Scanner';
 import Firewall from './components/Firewall';
 import ThreatIntel from './components/ThreatIntel';
 import Sidebar from './components/Sidebar';
+import AlertManager from './components/AlertManager';
 
 export type View = 'dashboard' | 'scanner' | 'firewall' | 'threat-intel' | 'settings';
 
@@ -34,6 +35,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-[#e0e0e0] font-sans selection:bg-cyan-500/30 selection:text-cyan-200 lg:p-4">
+      <AlertManager />
       <div className="flex bg-black lg:border-8 border-[#1a1a1a] min-h-screen lg:min-h-0 lg:h-[calc(100vh-2rem)]">
         {/* Mobile Header */}
         <div className="lg:hidden flex items-center justify-between p-4 border-b border-[#333] bg-[#0A0A0A] fixed top-0 w-full z-50">
